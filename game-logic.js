@@ -69,6 +69,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 'You lost! Computer has chosen: <span class="computer-choice">' + computerChoice + '</span>';
             console.log('You lost! Computer has chosen: ' + computerChoice);
              }
+
+        if(playerScore == 5)
+        {
+            gameResultDisplay.textContent = 'You Won (best of 5)!';
+            playerScore = 0;
+            playerScoreDisplay.textContent = playerScore;
+            computerScore = 0;
+            computerScoreDisplay.textContent = computerScore;
+        }
+        else if(computerScore == 5)
+        {
+            gameResultDisplay.textContent = 'You lost (best of 5)!';
+            playerScore = 0;
+            playerScoreDisplay.textContent = playerScore;
+            computerScore = 0;
+            computerScoreDisplay.textContent = computerScore;
+        }
     }
 
     function playRound(playerChoice) {
